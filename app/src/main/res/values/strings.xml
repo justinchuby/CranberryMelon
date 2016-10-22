@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CranberryMelon</string>
+    <string name="all_friends_list_elem_primary">Friend Name</string>
+    <string name="all_friends_list_elem_secondary">Pittsburgh, PA, USA</string>
+    <string name="all_friends_profile_picture_desc">description</string>
+    <string name="imageview_description_user_status">imageview_description_user_status</string>
+    <string name="all_friends_list_elem_time">12:00PM</string>
+    <string name="all_friends_list_elem_time_of_day">Noon</string>
+    <!--<string name="all_friends_list_elem_"-->
 </resources>
+
