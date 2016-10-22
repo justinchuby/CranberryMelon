@@ -44,11 +44,15 @@ public class AvailabilityListAdapter extends RecyclerView.Adapter<AvailabilityLi
     }
 
 
+
+
+    /*
     private List<Contact> contacts;
 
     public AvailabilityListAdapter(List<Contact> contacts) {
         this.contacts = contacts;
     }
+    */
 
     @Override
     public AvailabilityListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -64,6 +68,7 @@ public class AvailabilityListAdapter extends RecyclerView.Adapter<AvailabilityLi
     @Override
     public void onBindViewHolder(AvailabilityListAdapter.ViewHolder viewHolder, int position) {
 
+        /*
         Contact contact = contacts.get(position);
 
         //viewHolder.ivAvatar.setImageResource(0);
@@ -74,6 +79,7 @@ public class AvailabilityListAdapter extends RecyclerView.Adapter<AvailabilityLi
         } else {
 
         }
+        */
 
     }
 
