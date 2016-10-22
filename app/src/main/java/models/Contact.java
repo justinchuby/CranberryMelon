@@ -68,6 +68,7 @@ public class Contact {
         } catch (java.text.ParseException e) {
             e.printStackTrace();
         }
+        return contact;
     }
 }
 
