@@ -7,10 +7,9 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by chuby on 2016/10/22.
  */
 
-public class ContactsDB {
-}
 
 public class ContactsDatabaseHelper extends SQLiteOpenHelper {
+    private static ContactsDatabaseHelper sInstance;
     // Database Info
     private static final String DATABASE_NAME = "contactsDatabase";
     private static final int DATABASE_VERSION = 1;
@@ -50,8 +49,7 @@ public class ContactsDatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion != newVersion) {
             // Simplest implementation is to drop all old tables and recreate them
-            db.execSQL("DROP TABLE IF EXISTS " + TABLE_POSTS);
-            db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACTS);
             onCreate(db);
         }
     }

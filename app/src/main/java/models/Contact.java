@@ -23,6 +23,15 @@ public class Contact {
     private Map<String, String> instantMessages;
     private Date birthday;
     private String location;
+    private String timeZone;
+
+    public String getSystemId() {
+        return systemId;
+    }
+
+    public String getTimeZone() {
+        return timeZone;
+    }
 
     public String getName() {
         return name;
