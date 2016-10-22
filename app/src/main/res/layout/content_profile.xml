@@ -342,35 +342,76 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="@dimen/activity_horizontal_margin">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Send SMS" />
+            <ImageView
+                android:id="@+id/LinkMessenger"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:src="@drawable/facebook_messenger_android"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/LinkSkype"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:text="Call" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:src="@drawable/skype_icon"/>
+            <ImageView
+                android:id="@+id/LinkPhoneCall"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
-                android:text="Email" />
+                android:src="@drawable/phone_call_icon"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:src="@drawable/messege"/>
 
+            <ImageView
+                android:id="@+id/LinkMessage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_email_black"/>
+            <ImageView
+                android:id="@+id/LinkFB"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:src="@drawable/fb_icon"/>
+             </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
             <Button
+                android:layout_marginRight="@dimen/fab_margin"
+                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:text="Remove Contact" />
-
         </LinearLayout>
     </LinearLayout>
 
