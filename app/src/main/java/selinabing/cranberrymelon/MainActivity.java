@@ -108,14 +108,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onAddFriend (View view) {
-        Toast.makeText(this, "add button clicked", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(MainActivity.this, AddFriendActivity.class);
         startActivity(i);
 
     }
 
     public void onProfileView (MenuItem menuItem) {
-        Log.d("DEBUG","WHY NOT WRKIGN");
+        Intent i = new Intent(MainActivity.this, FriendProfileActivity.class);
+        startActivity(i);
 
         Toast.makeText(this, "profile view clicked", Toast.LENGTH_SHORT).show();
 

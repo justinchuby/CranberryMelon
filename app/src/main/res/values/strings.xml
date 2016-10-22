@@ -8,6 +8,7 @@
     <string name="all_friends_list_elem_time">12:00PM</string>
     <string name="all_friends_list_elem_time_of_day">Noon</string>
     <string name="title_activity_add_friend">AddFriendActivity</string>
+    <string name="title_activity_friend_profile">FriendProfileActivity</string>
     <!--<string name="all_friends_list_elem_"-->
 </resources>
 

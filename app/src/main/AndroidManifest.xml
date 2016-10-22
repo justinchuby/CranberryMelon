@@ -18,6 +18,10 @@
         <activity
             android:name=".AddFriendActivity"
             android:label="@string/title_activity_add_friend"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FriendProfileActivity"
+            android:label="@string/title_activity_friend_profile"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -5,7 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -13,13 +16,20 @@ import butterknife.ButterKnife;
  */
 public class AvailabilityListAdapter extends RecyclerView.Adapter<AvailabilityListAdapter.ViewHolder> {
 
-
     public class ViewHolder extends RecyclerView.ViewHolder {
+
+        @BindView(R.id.avatar_imageview)
+        ImageView ivAvatar;
+        @BindView(R.id.title_textview)
+        TextView tvFriendName;
+        @BindView(R.id.subtitle_textview)
+        TextView tvFriendLocation;
+        @BindView(R.id.tvTime) TextView tvRelativeTime;
+        @BindView(R.id.tvTimeOfDay) TextView tvPreciseTime;
 
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
-            //set item's onclicklisteners
         }
 
     }
