@@ -158,7 +158,7 @@
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:src="@drawable/clock_icon"
+                android:src="@mipmap/clock_icon"
                 />
 
             <TextView
@@ -170,7 +170,7 @@
                 android:layout_toLeftOf="@+id/chkState6"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="TIme Availability"
+                android:text="Time Availability"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121" />
             <ToggleButton
@@ -215,7 +215,7 @@
                 android:layout_marginRight="@dimen/fab_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:clickable="true"
-                android:src="@drawable/facebook_messenger_android"/>
+                android:src="@mipmap/facebook_messenger_android"/>
 
             <ImageView
                 android:id="@+id/LinkSkype"
@@ -226,7 +226,7 @@
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:clickable="true"
-                android:src="@drawable/skype_icon"/>
+                android:src="@mipmap/skype_icon"/>
             <ImageView
                 android:id="@+id/LinkPhoneCall"
                 android:layout_width="50dp"
