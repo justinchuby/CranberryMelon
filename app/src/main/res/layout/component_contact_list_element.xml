@@ -32,7 +32,6 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_toLeftOf="@+id/icon_imageview"
             android:layout_toRightOf="@+id/avatar_imageview"
             android:orientation="vertical"
             android:paddingBottom="16dp"
@@ -53,17 +52,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/icon_imageview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/imageview_description_user_status"
-            />
 
         <TextView
             android:id="@+id/tvTime"
