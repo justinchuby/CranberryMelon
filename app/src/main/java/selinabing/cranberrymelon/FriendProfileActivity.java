@@ -1,5 +1,6 @@
 package selinabing.cranberrymelon;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -42,23 +43,36 @@ public class FriendProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //link to webpage
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://facebook.com"));
-                startActivity(intent);
+
+                try {
+                    Intent intent = new Intent("android.intent.category.LAUNCHER");
+                    intent.setClassName("com.facebook.katana", "com.facebook.katana.LoginActivity");
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://facebook.com"));
+                    startActivity(intent);
+                }
             }
         });
 
         ivSkype.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //link to webpage
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://skype.com"));
-                startActivity(intent);
+                try {
+                    Intent intent = new Intent("android.intent.category.LAUNCHER");
+                    intent.setClassName("com.skype.raider", "com.skype.raider.Main");
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    //link to webpage
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://skype.com"));
+                    startActivity(intent);
+                }
             }
         });
 
@@ -77,15 +91,10 @@ public class FriendProfileActivity extends AppCompatActivity {
         ivPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //link to send message
-                String to = "4127368173";
-                Uri smsUri = Uri.parse("tel:"+to);
-                Intent intent = new Intent(Intent.ACTION_VIEW, smsUri);
-                intent.putExtra("address", to);
-                intent.putExtra("sms_body", message);
-                intent.setType("vnd.android-dir/mms-sms");//here setType will set the previous data null.
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:0377778888"));
+                if (callIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(callIntent);
                 }
             }
         });
@@ -104,76 +113,18 @@ public class FriendProfileActivity extends AppCompatActivity {
             }
         });
 
-        ivEmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:0377778888"));
-                if (callIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(callIntent);
-                }
-            }
-        });
 
-        ivSkype.setOnClickListener(new View.OnClickListener() {
+        ivMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //open skype webpage on click
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://facebook.com"));
-                startActivity(intent);
-            }
-        });
-
-        ivPhone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //make a phone call
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:0377778888"));
-                if (callIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(callIntent);
-                }
-            }
-        });
-
-        ivFB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //launch facebook on click
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://facebook.com"));
-                startActivity(intent);
-            }
-        });
-
-        ivMessenger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //launch messenger on click
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://messenger.com"));
-                startActivity(intent);
-            }
-        });
-
-        ivEmail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //link to send an emajl
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("plain/text");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "some@email.address" });
-                intent.putExtra(Intent.EXTRA_SUBJECT, "subject");
-                intent.putExtra(Intent.EXTRA_TEXT, "mail body");
+                String to = "4127368173";
+                Uri smsUri = Uri.parse("tel:" + to);
+                Intent intent = new Intent(Intent.ACTION_VIEW, smsUri);
+                intent.putExtra("address", to);
+                intent.putExtra("sms_body", message);
+                intent.setType("vnd.android-dir/mms-sms");//here setType will set the previous data null.
                 if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(Intent.createChooser(intent, ""));
+                    startActivity(intent);
                 }
             }
         });

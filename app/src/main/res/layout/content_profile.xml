@@ -209,8 +209,8 @@
 
             <ImageView
                 android:id="@+id/LinkMessenger"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/fab_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
@@ -219,30 +219,27 @@
 
             <ImageView
                 android:id="@+id/LinkSkype"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="@dimen/fab_margin"
-                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:clickable="true"
                 android:src="@drawable/skype_icon"/>
             <ImageView
                 android:id="@+id/LinkPhoneCall"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="@dimen/fab_margin"
-                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:clickable="true"
                 android:src="@drawable/phone_call_icon"/>
             <ImageView
                 android:id="@+id/LinkMessage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="@dimen/fab_margin"
-                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:clickable="true"
@@ -250,20 +247,18 @@
 
             <ImageView
                 android:id="@+id/LinkEmail"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="@dimen/fab_margin"
-                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:clickable="true"
                 android:src="@drawable/ic_email_black"/>
             <ImageView
                 android:id="@+id/LinkFB"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="@dimen/fab_margin"
-                android:layout_marginLeft="@dimen/fab_margin"
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:src="@drawable/fb_icon"
