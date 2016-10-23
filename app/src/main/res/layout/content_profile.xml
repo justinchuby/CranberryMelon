@@ -238,6 +238,7 @@
                 android:clickable="true"
                 android:src="@drawable/phone_call_icon"/>
             <ImageView
+                android:id="@+id/LinkMessage"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginRight="@dimen/fab_margin"
@@ -248,7 +249,7 @@
                 android:src="@drawable/messege"/>
 
             <ImageView
-                android:id="@+id/LinkMessage"
+                android:id="@+id/LinkEmail"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginRight="@dimen/fab_margin"
