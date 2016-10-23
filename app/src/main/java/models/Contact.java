@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 public class Contact {
 
     private String name;
-    private long id;
+    private String id;
     private String systemId;
     private boolean favorited;
     private ArrayList<PhoneNumber> numbers;
@@ -37,7 +37,7 @@ public class Contact {
         return name;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
@@ -70,7 +70,7 @@ public class Contact {
         Contact contact = new Contact();
         try {
             contact.name = jsonObject.getString("name");
-            contact.id = jsonObject.getLong("id");
+            contact.id = jsonObject.getString("id");
             contact.favorited = jsonObject.getBoolean("favorited");
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
             contact.birthday = formatter.parse(jsonObject.getString("birthday"));
